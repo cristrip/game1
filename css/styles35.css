@@ -1,0 +1,335 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;   
+}
+/* SOSSOSOSOSOSOSOSOS
+AND HTML */
+html,body{
+    width:100%;
+    height: 100%;
+    background-image:url("../img/game-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* margin: auto; */
+    position: fixed;
+    /* SOSOSOSOSOSOS position  FIXED */
+}
+.game{      
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    /* border:3px solid black; */
+    margin:auto;
+}
+/* THE LOG WINDOW */
+.window1{
+    position: absolute;
+    right:10px;
+    top: 150px;
+    height: 350px;
+    width: 250px;
+    font-size: 15px;
+    background-color: #a14c4c;
+    color: aliceblue;
+    padding: 10px;
+  }
+  .window2{
+    position: relative;
+  }
+  .window3{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    height: 220px;
+    width: 220px;
+    border: 3px solid rgb(74, 72, 72);
+    margin-top: 5px;
+    overflow: hidden;
+    color: aliceblue;
+    z-index: 1;
+    color:antiquewhite;
+    margin: 10px;
+  }
+  /* POPUP */
+  .popup {
+    position: relative;
+    display: inline-block;
+  }
+  .list_1{
+    width: 180px;
+  }
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 400px;
+    height: auto;
+    background-color: #a14c4c;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 40px 0;
+    position: absolute;
+    z-index: 2;
+    left: 500px;
+    bottom: 200px;
+  }
+  .popup .popuptext::after {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .popup .show {
+    visibility: visible;
+  }
+  .popup .show2 {
+    visibility: hidden;
+  }
+  /* popup reload */
+  .popupr {
+    position: relative;
+    display: inline-block;
+  }
+  /* The actual popup */
+  .popupr .popuptextr {
+    visibility: hidden;
+    width: 700px;
+    height: 300px;
+    background-color: #a14c4c;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 40px 0;
+    position: absolute;
+    left: 400px;
+    bottom: 50px;
+    z-index:3;
+  }
+  .popupr .popuptextr::after {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .popupr .show1 {
+    visibility: visible;
+    z-index: 3;
+  }
+  .popupr .show3 {
+    visibility: hidden;
+  }
+  .popupr1 .popuptextr1 {
+    visibility: hidden;
+    width: 600px;
+    background-color: #a14c4c;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 40px 0;
+    position: absolute;
+    left: 300px;
+    bottom: 150px;
+    z-index:3;
+  }
+  .popupr1 .popuptextr1::after {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .popupr1 .show5 {
+    visibility: visible;
+    z-index: 3;
+  }
+  .popupr1 .show6 {
+    visibility: hidden;
+  }
+  /* ///////////////3////////////////////////////// */
+  .popupr2 .popuptextr2 {
+    visibility: hidden;
+    width: 600px;
+    background-color: #a14c4c;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 40px 0;
+    position: absolute;
+    left: 300px;
+    bottom: 150px;
+    z-index:3;
+  }
+  .popupr2 .popuptextr2::after {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .popupr2 .show8 {
+    visibility: visible;
+    z-index: 3;
+  }
+  /* //////////////////////////////////////////////////////////////// */
+  /* Add animation (fade in the popup) */
+   @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+  .but_1{
+    width: 100px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: aliceblue;
+    color: #a14c4c;
+    cursor: pointer;
+  }
+  .but_1:hover{
+    color: #281313;
+  } 
+  /* /////////////////////////////////////////////////// */
+  .life{
+    position:absolute;
+    left: 630px;
+    bottom: 20px;
+  }
+  .life_i{
+    width: 20px;
+  }
+  .cactus{
+    width: 200px;
+    position:absolute;
+    right: 150px;
+    bottom: 20px;
+  }
+  .saloon{
+    position: absolute;
+    left:0px;
+    bottom: 0px;
+  }
+  #frame{
+    /* IS MOVING ALSO THE SALOON */
+    position: absolute;
+    left:400px;
+    bottom: 200px;
+    z-index: 1;
+}
+#frame:hover{
+    cursor: pointer;
+  }
+#main_div{
+    position: relative;
+    width: 700px;
+    height: 500px;
+    /* background-color: red; */
+  }
+  
+  #bandit_id_img {
+    position: absolute;
+    width: 60px;
+    /* THE FIRST appearance SOSOSOSOSOSOSOSOSOSOSOSO */
+    bottom: 50px;
+    right: 460px;
+    z-index: 2;
+  }
+  .revolver{
+    width: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: 580px;
+  }
+  .bandit_jack{
+    width: 100px;
+    position:absolute;
+    left: 30px;
+    bottom: 150px;
+  }
+  .bandit_joe{
+    width: 100px;
+    position:absolute;
+    left: 180px;
+    bottom: 20px;
+  }
+  .bandit_john{
+    width: 100px;
+    position:absolute;
+    left: 330px;
+    bottom: 20px;
+  }
+  .gun{
+    width: 100px;
+    position:absolute;
+    left: 500px;
+    bottom: 20px;
+  }
+  .bandit_rand{
+    position:absolute;
+    width: 70px;
+    /* bottom: 200px;
+    left:605px; */
+    z-index: 2;
+  }
+   .banditos1{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    left: 50px;
+    bottom: 20px;
+    gap: 10px;
+   }
+   .banditos2{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    left: 220px;
+    bottom: 20px;
+    gap: 10px;
+   }
+   .banditos3{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    left: 390px;
+    bottom: 20px;
+    gap: 10px;
+   }
+   .banditos1_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    margin-left: 20px;
+   }
+   .banditos1_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .banditos1_para2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .div_but{
+    display: flex;
+    justify-content: space-around;
+   }
